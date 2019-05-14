@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+{% for item in attemp %}
+<div class="alert alert-dark" role="alert">
+    <h2>Задача: {{item.task}}</h2>
+    <div>Код: {{item.code}}</div>
+    <div>Статус: {{item.status}}</div>
+    <a href="/edit_attemp/{{item.id}}">редактировать статус посылки</a>
+    <a href="/delete_news/{{item.id}}">Удалить посылку</a>
+</div>
+{% endfor %}
+
+
+{% endblock %}
